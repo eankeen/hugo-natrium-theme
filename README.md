@@ -26,7 +26,7 @@ Run the following inside your Hugo site folder:
 ```
 $ mkdir themes
 $ cd themes
-$ git clone https://github.com/mobybit/hugo-natrium-theme
+$ git clone https://github.com/EanKeen/hugo-natrium-theme
 ```
 
 ## Configuration
