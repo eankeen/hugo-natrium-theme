@@ -1,3 +1,9 @@
+:root {
+  --dark-text-color: var(--oc-gray-8);
+  --middle-text-color: var(--oc-gray-6);
+  --light-text-color: var(--oc-gray-5);
+}
+
 html,
 body {
   margin: 0;
@@ -18,7 +24,7 @@ h4,
 h5,
 h6 {
   font-family: 'Lato', sans-serif;
-  color: var(--oc-gray-9);
+  color: var(--oc-gray-8);
 }
 
 pre,
@@ -81,16 +87,19 @@ blockquote {
 }
 
 .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   max-width: 800px;
   margin: 0 auto;
   padding: 0 15px;
   font-family: 'Lato', sans-serif;
-  text-align: right;
+  /* text-align: right; */
 }
 
 .nav-logo {
-  float: left;
-  margin-top: -11px;
+  /* float: left;
+  margin-top: -11px; */
   transition: transform 150ms ease-out;
 }
 
@@ -127,6 +136,7 @@ blockquote {
 }
 
 .nav-links li:hover {
+  background-color: var(--oc-gray-1);
   box-shadow: 3px 3px 6px var(--oc-gray-3);
   cursor: pointer;
   transition: box-shadow 150ms ease-in-out;
@@ -138,7 +148,7 @@ blockquote {
 }
 
 .nav-links li:hover a {
- color: var(--oc-gray-9);
+ color: var(--oc-gray-8);
 }
 
 .content {
@@ -149,7 +159,7 @@ blockquote {
   padding: 0 15px;
   font-size: 16px;
   line-height: 1.7;
-  color: var(--oc-gray-8);
+  color: var(--oc-gray-7);
 }
 
 .article-title {
@@ -173,7 +183,7 @@ blockquote {
   text-decoration: none;
   color: inherit;
   border-bottom: medium solid var(--oc-gray-2);
-  transition: border-color 600ms;
+  transition: border-color 500ms;
 }
 
 .article-content a:hover,
@@ -194,7 +204,7 @@ blockquote {
   list-style: none;
   padding-left: 0;
   font-family: 'Lato', sans-serif;
-  color: var(--oc-gray-5);
+  color: var(--oc-gray-7);
   font-size: 14px;
   text-align: left;
 }
@@ -204,7 +214,7 @@ blockquote {
   margin: 5px 0 10px;
   height: 1px;
   border: none;
-  background: var(--oc-gray-1);
+  background: var(--oc-gray-5);
 }
 
 .article-taxonomy a {
@@ -212,12 +222,12 @@ blockquote {
   margin: 0 10px 0 0;
   text-decoration: none;
   color: inherit;
-  transition: color 300ms;
+  transition: color 250ms;
 }
 
 .article-taxonomy a:hover,
 .article-taxonomy a:active {
-  color: var(--oc-gray-1);
+  color: var(--oc-gray-5);
 }
 
 .article-image-large {
@@ -257,7 +267,7 @@ blockquote {
   display: block;
   padding: 4px 0;
   font-family: 'Lato', sans-serif;
-  color: var(--oc-gray-3);
+  color: var(--light-text-color);
   font-size: 14px;
 }
 
@@ -274,13 +284,13 @@ blockquote {
   font-size: 17px;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
-  color: var(--oc-gray-8);
+  color: var(--dark-text-color);
   border-bottom: 1px solid var(--oc-gray-3);
-  transition: border-color 300ms;
+  transition: border-color 250ms;
 }
 
 .list-item a:hover {
-  border-color: var(--oc-gray-8);
+  border-color: var(--light-text-color)
 }
 
 .category-item {
@@ -297,14 +307,18 @@ blockquote {
   font-size: 19px;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
-  color: var(--oc-gray-8);
-  transition: color 300ms;
+  color: var(--dark-text-color);
+  transition: color 250ms;
+}
+
+.category-item a:hover {
+  cursor: pointer;
 }
 
 .category-item-count {
   font-family: 'Lato', sans-serif;
   margin-right: 15px;
-  color: var(--oc-gray-5);
+  color: var(--light-text-color);
   font-size: 14px;
   font-weight: bold;
 }
@@ -324,15 +338,15 @@ blockquote {
   text-decoration: none;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
-  color: var(--oc-gray-8);
-  transition: color 300ms;
+  color: var(--dark-text-color);
+  transition: color 250ms;
 }
 
 .tag-cloud-item a:hover,
 .tag-cloud-item a:active,
 .category-item a:hover,
 .category-item a:active {
-   color: var(--oc-gray-5);
+   color: var(--middle-text-color);
 }
 
 .footer {
@@ -347,7 +361,7 @@ blockquote {
   list-style: none;
   margin: 0;
   padding: 0;
-  color: var(--oc-gray-5);
+  color: var(--oc-gray-3);
   font-size: 14px;
 }
 
@@ -358,14 +372,14 @@ blockquote {
 }
 
 .footer-links a {
-  color: var(--oc-gray-7);
+  color: var(--dark-text-color);
   text-decoration: none;
-  transition: color 300ms;
+  transition: color 250ms;
   margin: 0 5px;
 }
 
 .footer-links a:hover {
-  color: var(--oc-gray-8);
+  color: var(--middle-text-color);
 }
 
 .footer-links li::before {
@@ -394,7 +408,7 @@ blockquote {
   text-decoration: none;
   padding: 0 5px;
   color: var(--oc-gray-5);
-  transition: color 300ms;
+  transition: color 250ms;
 }
 
 .page-links a:hover {
@@ -419,7 +433,7 @@ blockquote {
 .error-page-content a {
   text-decoration: none;
   color: inherit;
-  transition: color 600ms;
+  transition: color 500ms;
 }
 
 .error-page-content a:hover,
@@ -471,7 +485,7 @@ blockquote {
   }
 
   .nav-logo {
-    margin-top: -13px;
+    /* margin-top: -13px; */
   }
 
   .nav-logo img {
