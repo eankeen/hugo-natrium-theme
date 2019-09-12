@@ -1,17 +1,15 @@
 {{ partial "header.html" . }}
 
 <main class="content">
-
   <div class="list">
-     {{ range (.Paginate ((where .Data.Pages "Type" "posts").GroupByDate "2006")).PageGroups }}    
-  <h2 class="list-title">{{ .Key }}</h2>
-    {{ range .Pages }}
-    
+    {{ range  (where $.Site.Pages "Type" "posts") }}
+
+    {{ if ne .Page.Title "Posts" }}
     {{ partial "list-item.html" . }}
+    {{ end }}
 
     {{ end }}
-    {{ end }}
-  </div>  
+  </div>
 
   {{ partial "pagination.html" . }}
 
