@@ -3,28 +3,28 @@
 {{ hugo.Generator }}
 
 {{ if eq .Params.url "/" }}
-<title>{{ .Title }}</title>
-<meta property="og:title" content="{{ .Title }}">
-<meta property="og:type" content="website">
+  <title>{{ .Title }}</title>
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:type" content="website">
 {{ else }}
-<title>{{ .Title }} - {{ .Site.Title }}</title>
-<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+  <title>{{ .Title }} - {{ .Site.Title }}</title>
+  <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
 {{ end }}
 
 {{ if eq .Params.url "/" }}
-<meta property="description" content="{{ .Site.Params.description }}">
+  <meta property="description" content="{{ .Site.Params.description }}">
 {{ else }}
   {{ if .Description }}
-  <meta property="description" content="{{ .Description }}">
+    <meta property="description" content="{{ .Description }}">
   {{ end }}
 {{ end }}
 
 {{ if .Keywords }}
-<meta property="keywords" content ="{{ delimit .Keywords ", " }}">
+  <meta property="keywords" content ="{{ delimit .Keywords ", " }}">
 {{ end }}
 
 {{ if .Site.RSSLink }}
-<link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 {{ end }}
 
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/open-color.css" media="all">
